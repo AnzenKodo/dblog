@@ -1,6 +1,7 @@
 # dblog
 
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE)
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/dblog/LICENSE)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/AnzenKodo/dblog/dblog%20setup/main?logo=github&style=for-the-badge)](https://github.com/AnzenKodo/dblog/actions/workflows/setup.yml)
 
 dblog blog generator, that generates blog from Markdown and JSON file.
 dblog handles technical parts, so you can focus on hard part writing.
