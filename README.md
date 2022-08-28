@@ -32,17 +32,17 @@ dblog handles technical parts, so you can focus on hard part writing.
 - After installing deno run following commands.
 ```sh
 # See all the options that are available
-deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js --help
+deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js --help
 
 # Setup the your blog (Skip this if already your blog setup)
-deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js --setup
+deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js --setup
 
 # Make your blog and Run on localhost
-deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js
+deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js
 ```
 
 ## Live Demo & Folder
-- [Live Demo](https://AnzenKodo.github.com/dblog)
+- [Live Demo](https://AnzenKodo.github.io/dblog)
 - [Generated Files](https://github.com/AnzenKodo/dblog/tree/gh-pages)
 
 ## Configuration
@@ -115,7 +115,7 @@ Website: https://anzenkodo.github.io/dblog
 Repo: https://github.com/AnzenKodo/dblog
 
 USAGE:
-  deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js [OPTIONS]
+  deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js [OPTIONS]
 
 OPTIONS:
             If no options are given the localhost will run normally.

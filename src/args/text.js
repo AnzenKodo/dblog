@@ -3,7 +3,7 @@ import config from "../utils/data.js";
 export const data = config(false);
 
 const command =
-  "deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js";
+  "deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js";
 
 const fileOptions = `---
 title: If empty the file name will be used
@@ -74,7 +74,7 @@ ${command}
 \`\`\`
 
 ## Live Demo & Folder
-- [Live Demo](https://AnzenKodo.github.com/dblog)
+- [Live Demo](https://AnzenKodo.github.io/dblog)
 - [Generated Files](https://github.com/AnzenKodo/dblog/tree/gh-pages)
 
 ## Configuration
