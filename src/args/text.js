@@ -1,8 +1,8 @@
 export const description =
-  "dlog blog generator, that generates blog from Markdown and JSON file.\ndlog handles technical parts, so you can focus on hard part writing.";
+  "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.";
 
 const command =
-  "deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dlog/mod.js";
+  "deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js";
 
 const fileOptions = `---
 title: If empty the file name will be used
@@ -14,8 +14,8 @@ canonical:
 
 export const helpText = `${description}
 
-Website: https://anzenkodo.github.io/dlog
-Repo: https://github.com/AnzenKodo/dlog
+Website: https://anzenkodo.github.io/dblog
+Repo: https://github.com/AnzenKodo/dblog
 
 USAGE:
   ${command} [OPTIONS]
@@ -27,11 +27,11 @@ OPTIONS:
   --build   Build blog without starting localhost.
   --setup   Setup new blog.
   --backup  Restore blog if 'backup.json' file available.
-  --readme  Generate dlog 'README.md' file.
+  --readme  Generate dblog 'README.md' file.
 `;
 
 export const config = {
-  "name": "dlog",
+  "name": "dblog",
   "start_url": "",
   "description": description,
   "email": "",
@@ -53,8 +53,8 @@ export const config = {
   "head": "",
 };
 
-export const dlogDocs = `# dlog
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dlog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE/)
+export const dblogDocs = `# dblog
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE/)
 
 ${description}
 
@@ -96,8 +96,8 @@ ${command}
 \`\`\`
 
 ## Live Demo & Folder
-- [Demo](https://AnzenKodo.github.com/dlog)
-- [Folder Structure](https://github.com/AnzenKodo/dlog/tree/build)
+- [Demo](https://AnzenKodo.github.com/dblog)
+- [Folder Structure](https://github.com/AnzenKodo/dblog/tree/build)
 
 ## Configuration
 Place \`config.json\` in root folder to edit default configuration. The \`config.json\` is optional.
@@ -116,7 +116,7 @@ ${JSON.stringify(config, null, 2)}
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
 - **favicon** - Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
-- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* \`Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dlog/LICENSE.html)\`.
+- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* \`Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dblog/LICENSE.html)\`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
@@ -181,10 +181,10 @@ ${fileOptions}
 
 #### Link and Image
 \`\`\`md
-[dlog website](https://anzenkodo.github.io/dlog)
+[dblog website](https://anzenkodo.github.io/dblog)
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 \`\`\`
-[dlog website](https://anzenkodo.github.io/dlog)
+[dblog website](https://anzenkodo.github.io/dblog)
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 
 #### Blockquote
@@ -385,5 +385,5 @@ colspan="3"><strong>30–32</strong> ATP</td> </tr> </tbody> </table>
 
 export const template = `${fileOptions}
 
-# See [Markdown Guide](https://anzenkodo.github.io/dlog/posts/Dlog-Docs.html#markdown-guide) to get started
+# See [Markdown Guide](https://anzenkodo.github.io/dblog/posts/dblog-Docs.html#markdown-guide) to get started
 `;

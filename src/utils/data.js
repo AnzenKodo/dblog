@@ -11,7 +11,7 @@ export function config(data) {
     data = JSON.parse(Deno.readTextFileSync(data));
   }
 
-  data.name = data.name || "dlog";
+  data.name = data.name || "dblog";
   data.description = data.description || description;
   data.author = data.author || "AnzenKodo";
   data.posts = data.posts || "./posts";
