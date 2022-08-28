@@ -1,49 +1,6 @@
-# dlog
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dlog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE/)
-
-dlog blog generator, that generates blog from Markdown and JSON file.
-dlog handles technical parts, so you can focus on hard part writing.
-
-## Features
-- Easy to:
-  - Setup
-  - Configure
-  - Write
-- Supports:
-  - Tags
-  - Canonical
-  - [Open Graph](https://ogp.me)
-  - Analytics
-- Auto generate:
-  - RSS Feed
-  - Favicon
-  - Sitemap
-  - 404 page
-  - CSS
-- No Client side JavaScript
-- Minified HTML & Inline CSS
-- Lightweight
-
-## Getting Started
-- Download deno from https://deno.land/ and install it.
-- After installing open your terminal and run following commands.
-```sh
-# Make blog directory
-mkdir blog
-
-# See all the options that are available
-deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dlog/mod.js --help
-
-# Setup the your blog (Skip this if already your blog setup)
-deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dlog/mod.js --setup
-
-# Make your blog and Run on localhost
-deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dlog/mod.js
-```
-
-## Live Demo & Folder
-- [Demo](https://AnzenKodo.github.com/dlog)
-- [Folder Structure](https://github.com/AnzenKodo/dlog/tree/build)
+# dblog
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog)
+- [Folder Structure](https://github.com/AnzenKodo/dblog/tree/build)
 
 ## Configuration
 Place `config.json` in root folder to edit default configuration. The `config.json` is optional.
@@ -51,9 +8,9 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 **The `config.json` with default configuration:**
 ```json
 {
-  "name": "dlog",
+  "name": "dblog",
   "start_url": "",
-  "description": "dlog blog generator, that generates blog from Markdown and JSON file.\ndlog handles technical parts, so you can focus on hard part writing.",
+  "description": "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.",
   "email": "",
   "author": "AnzenKodo",
   "posts": "./posts",
@@ -82,7 +39,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
 - **favicon** - Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
-- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* `Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dlog/LICENSE.html)`.
+- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* `Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dblog/LICENSE.html)`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
@@ -105,14 +62,14 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 ## Cli Options
 
 ```sh
-dlog blog generator, that generates blog from Markdown and JSON file.
-dlog handles technical parts, so you can focus on hard part writing.
+dblog blog generator, that generates blog from Markdown and JSON file.
+dblog handles technical parts, so you can focus on hard part writing.
 
-Website: https://anzenkodo.github.io/dlog
-Repo: https://github.com/AnzenKodo/dlog
+Website: https://anzenkodo.github.io/dblog
+Repo: https://github.com/AnzenKodo/dblog
 
 USAGE:
-  deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dlog/mod.js [OPTIONS]
+  deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js [OPTIONS]
 
 OPTIONS:
             If no options are given the localhost will run normally.
@@ -121,7 +78,7 @@ OPTIONS:
   --build   Build blog without starting localhost.
   --setup   Setup new blog.
   --backup  Restore blog if 'backup.json' file available.
-  --readme  Generate dlog 'README.md' file.
+  --readme  Generate dblog 'README.md' file.
 
 ```
 
@@ -170,10 +127,10 @@ canonical:
 
 #### Link and Image
 ```md
-[dlog website](https://anzenkodo.github.io/dlog)
+[dblog website](https://anzenkodo.github.io/dblog)
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 ```
-[dlog website](https://anzenkodo.github.io/dlog)
+[dblog website](https://anzenkodo.github.io/dblog)
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 
 #### Blockquote
