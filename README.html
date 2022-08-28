@@ -71,7 +71,30 @@ deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr
 <h2 id="configuration" tabindex="-1"><a class="direct-link" href="#configuration" aria-hidden="true">#</a> Configuration</h2>
 <p>Place <code class="hljs">config.json</code> in root folder to edit default configuration. The <code class="hljs">config.json</code> is optional.</p>
 <p><strong>The <code class="hljs">config.json</code> with default configuration:</strong></p>
-<pre><code class="hljs language-json">undefined
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dblog&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;start_url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://AnzenKodo.github.io/dblog/&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;email&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;author&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;AnzenKodo&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;posts&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;./posts&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;output&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;./site&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;favicon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;favicon.svg&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;lang&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;en-US&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;port&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8000</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;background&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#ffffff&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;foreground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#000000&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;theme&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#01a252&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;footer&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&lt;p&gt;Made by &lt;a href=\&quot;https://AnzenKodo.github.io/AnzenKodo\&quot;&gt;AnzenKodo&lt;/a&gt; under &lt;a href=\&quot;https://anzenkodo.github.io/dblog/LICENSE\&quot;&gt;MIT&lt;/a&gt;&lt;/p&gt;\n&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;page404&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&lt;p&gt;404 Page Not Found, Sorry :(&lt;/p&gt;\n&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;backup&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;exclude&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-string">&quot;config.json&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-string">&quot;backup.json&quot;</span>
+  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;nav&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;head&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-punctuation">}</span>
 </code></pre>
 <p><strong>Note:</strong> Every option is optional.</p>
 <ul>
@@ -255,6 +278,12 @@ OPTIONS:
 </ul>
 </section>
 <section>
+<h4 id="image-with-caption" tabindex="-1"><a class="direct-link" href="#image-with-caption" aria-hidden="true">#</a> Image with caption</h4>
+<pre><code class="hljs language-md">![<span class="hljs-string">Deno</span>](<span class="hljs-link">https://deno.land/images/artwork/deno_matrix.png &quot;Matrix by bramaudi&quot;</span>)
+</code></pre>
+<figure data-type="image"><img src="https://deno.land/images/artwork/deno_matrix.png" alt="Deno" loading="lazy" decoding="async"><figcaption>Matrix by bramaudi</figcaption></figure>
+</section>
+<section>
 <h4 id="footer" tabindex="-1"><a class="direct-link" href="#footer" aria-hidden="true">#</a> Footer</h4>
 <pre><code class="hljs language-md">Here is a footnote reference[^1].
 [<span class="hljs-symbol">^1</span>]: <span class="hljs-link">Here is the footnote.</span>
@@ -278,12 +307,6 @@ OPTIONS:
 <u>underline</u>
 <ins>insert</ins>
 <del>delete</del></p>
-</section>
-<section>
-<h4 id="image-resize" tabindex="-1"><a class="direct-link" href="#image-resize" aria-hidden="true">#</a> Image resize</h4>
-<pre><code class="hljs language-md">![<span class="hljs-string">Deno Matrix by bramaudi with 100 width and 100 height</span>](<span class="hljs-link">https://deno.land/images/artwork/deno_matrix.png =100x100</span>)
-</code></pre>
-<img src="https://deno.land/images/artwork/deno_matrix.png" height="100" width="100">
 </section>
 <section>
 <h4 id="description-list" tabindex="-1"><a class="direct-link" href="#description-list" aria-hidden="true">#</a> Description list</h4>
