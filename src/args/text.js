@@ -82,7 +82,7 @@ Place \`config.json\` in root folder to edit default configuration. The \`config
 
 **The \`config.json\` with default configuration:**
 \`\`\`json
-${JSON.stringify(config, null, 2)}
+${JSON.stringify(data, null, 2)}
 \`\`\`
 
 **Note:** Every option is optional.
@@ -221,6 +221,13 @@ console.log("Code Blog in JavaScript");
 - [ ] Checkbox
 - [x] Checkbox with tick
 
+
+#### Image with caption
+\`\`\`md
+![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
+\`\`\`
+![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
+
 #### Footer
 \`\`\`md
 Here is a footnote reference[^1].
@@ -246,12 +253,6 @@ _underline_
 <u>underline</u>
 <ins>insert</ins>
 <del>delete</del>
-
-#### Image resize
-\`\`\`md
-![Deno Matrix by bramaudi with 100 width and 100 height](https://deno.land/images/artwork/deno_matrix.png =100x100)
-\`\`\`
-<img src="https://deno.land/images/artwork/deno_matrix.png" height="100" width="100">
 
 #### Description list
 \`\`\`md

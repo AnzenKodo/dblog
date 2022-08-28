@@ -161,6 +161,13 @@ p picture img{
   float:none;
   margin:0;
 }
+figure img {
+  max-width: 100%;
+}
+figcaption {
+  text-align: center;
+  font-style: italic;
+}
 
 blockquote {
   font-style: italic;

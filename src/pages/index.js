@@ -36,11 +36,11 @@ export default function index(data, entries, buildPath) {
   const meta = {
     title: "home",
     description: data.description,
-    fileNamePath: buildPath,
+    url: "index.html",
   };
 
   Deno.writeTextFile(
-    meta.fileNamePath,
+    buildPath,
     html(data, meta, '<ul class="list">' + main + "</ul>", false),
   );
 }

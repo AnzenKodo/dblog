@@ -34,10 +34,10 @@ jobs:
 
       - name: Run Setup
         run: deno run --allow-write --allow-read --allow-net --allow-run mod.js --setup
-        
+
       - name: Run Build
         run: deno run --allow-write --allow-read --allow-net --allow-run mod.js --build
-        
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
