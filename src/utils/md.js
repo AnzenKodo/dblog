@@ -35,8 +35,8 @@ const mdParse = new MarkdownIt({
   .use(underline)
   .use(del)
   .use(deflist)
-  .use(checkbox, { enabled: false })
   .use(highlightjs, { inline: true })
+  .use(checkbox, { enabled: false, label: true })
   .use(implicitFigures, {
     lazy: true,
     async: true,
