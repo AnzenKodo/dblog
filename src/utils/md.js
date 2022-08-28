@@ -41,8 +41,7 @@ const mdParse = new MarkdownIt({
     lazy: true,
     async: true,
     dataType: true,
-    classes: "lazy",
-    figcaption: "alt",
+    figcaption: true,
   })
   .use(multimd, {
     multiline: true,

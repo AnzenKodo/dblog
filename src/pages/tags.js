@@ -40,11 +40,11 @@ export default function tags(data, buildPath) {
   const meta = {
     title: "tags",
     description: `${data.name} tags`,
-    fileNamePath: `${data.output}/tags.html`,
+    url: `tags.html`,
   };
 
   Deno.writeTextFile(
-    meta.fileNamePath,
+    `${data.output}/tags.html`,
     html(data, meta, "<ul class='list'>" + tagsName + "</ul>", false),
   );
 }

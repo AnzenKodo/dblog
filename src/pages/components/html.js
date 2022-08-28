@@ -25,7 +25,7 @@ export default function html(data, meta, content, isPost) {
   <meta property="og:image:width" content="500">
   <meta property="og:image:height" content="500">
   <meta property="og:image:alt" content="${data.name} logo">
-  <meta property="og:url" content="${data.start_url}${meta.fileNamePath}.html">
+  <meta property="og:url" content="${data.start_url}${meta.url}.html">
   <meta property="og:title" content="${meta.title} - ${data.name}">
   <meta property="og:description" content="${meta.description}">
   ${canonical}

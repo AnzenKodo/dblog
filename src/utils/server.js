@@ -34,14 +34,14 @@ export default async function server(data, main) {
   const style = `font-weight: bold; color: ${data.theme};`;
 
   if (!Deno.args.includes("--noopen")) {
-    await open("http://localhost:" + data.port);
     console.log(
-      '%cOpening browser... (If you don\'t want to open Browser, run with "--noopen" option.)\n',
+      '%cBrowser will not open because you are using "--noopen" option. To open Browser run without "--noopen" option.\n',
       style,
     );
   } else {
+    await open("http://localhost:" + data.port);
     console.log(
-      '%cBrowser will not open because you are using "--noopen" option. To open Browser run without "--noopen" option.\n',
+      '%cOpening browser... (If you don\'t want to open Browser, run with "--noopen" option.)\n',
       style,
     );
   }

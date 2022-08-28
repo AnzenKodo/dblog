@@ -28,7 +28,7 @@ function readingTime(text) {
   return `${output}` + "min" + ``;
 }
 
-export default function meta(entry) {
+export default function meta(data, entry) {
   if (!entry.attributes) entry.attributes = new Object();
 
   const title = entry.fileName.replace(/[-%]/g, " ");
@@ -40,13 +40,17 @@ export default function meta(entry) {
   entry.attributes.tags = entry.attributes.tags || [];
   entry.attributes.canonical = entry.attributes.canonical || false;
 
-  try {
-    entry.attributes.description =
-      entry.attributes.description.replaceAll('"', "'") ||
-      entry.html.match(/(?<=<p>).*\n.*(?=<\/p>)/g)[0];
-  } catch (_e) {
-    entry.attributes.description = ``;
+  let description = entry.attributes.description;
+  const firstPara = entry.html.match(/(?<=<p>)[\w\d\s,.]*(?=<\/p>)/);
+  if (description) {
+    description = entry.attributes.description;
+  } else if (firstPara) {
+    description = firstPara[0];
+  } else {
+    description = data.description;
   }
+  entry.attributes.description = description.replaceAll('"', "'");
 
+  console.log(entry.attributes.description);
   return entry;
 }

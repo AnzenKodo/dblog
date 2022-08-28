@@ -44,7 +44,7 @@ function main(data) {
     const draftPost = /^_/.test(entry.name);
     if (!entry.isOutput && entry.ext === ".md" && !draftPost) {
       entry = md(entry);
-      entry = meta(entry);
+      entry = meta(data, entry);
       posts(data, entry, `${data.output}/${entry.fileNamePath}.html`);
     }
 

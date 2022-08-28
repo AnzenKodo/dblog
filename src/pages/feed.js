@@ -92,7 +92,7 @@ export default function feed(data, buildPath) {
     <title>${entry.attributes.title}</title>
     <link>${data.start_url}${entry.fileNamePath}.html</link>
     <pubDate>${entry.dateUTC}</pubDate>
-    <description>${entry.html}</description>
+    <description><![CDATA[${entry.html}]]></description>
     </item>`;
   }
 
