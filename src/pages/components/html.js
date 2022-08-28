@@ -20,6 +20,7 @@ export default function html(data, meta, content, isPost) {
   <title>${meta.title} - ${data.name}</title>
   <meta name="author" content="${data.author}">
   <meta name="description" content="${meta.description}">
+  <meta name="theme-color" content="${data.theme}"/>
   <link rel="icon" type="image/svg+xml" href="${data.start_url}${data.favicon}">
   <meta property="og:image" content="${data.start_url}${data.favicon}">
   <meta property="og:image:width" content="500">
