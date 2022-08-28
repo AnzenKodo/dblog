@@ -50,7 +50,30 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 
 **The `config.json` with default configuration:**
 ```json
-undefined
+{
+  "name": "dblog",
+  "start_url": "https://AnzenKodo.github.io/dblog/",
+  "description": "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.",
+  "email": "",
+  "author": "AnzenKodo",
+  "posts": "./posts",
+  "output": "./site",
+  "favicon": "favicon.svg",
+  "lang": "en-US",
+  "port": 8000,
+  "background": "#ffffff",
+  "foreground": "#000000",
+  "theme": "#01a252",
+  "footer": "<p>Made by <a href=\"https://AnzenKodo.github.io/AnzenKodo\">AnzenKodo</a> under <a href=\"https://anzenkodo.github.io/dblog/LICENSE\">MIT</a></p>\n",
+  "page404": "<p>404 Page Not Found, Sorry :(</p>\n",
+  "backup": false,
+  "exclude": [
+    "config.json",
+    "backup.json"
+  ],
+  "nav": {},
+  "head": ""
+}
 ```
 
 **Note:** Every option is optional.
@@ -212,6 +235,13 @@ console.log("Code Blog in JavaScript");
 - [ ] Checkbox
 - [x] Checkbox with tick
 
+
+#### Image with caption
+```md
+![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
+```
+![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
+
 #### Footer
 ```md
 Here is a footnote reference[^1].
@@ -237,12 +267,6 @@ _underline_
 <u>underline</u>
 <ins>insert</ins>
 <del>delete</del>
-
-#### Image resize
-```md
-![Deno Matrix by bramaudi with 100 width and 100 height](https://deno.land/images/artwork/deno_matrix.png =100x100)
-```
-<img src="https://deno.land/images/artwork/deno_matrix.png" height="100" width="100">
 
 #### Description list
 ```md
