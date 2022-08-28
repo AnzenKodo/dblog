@@ -54,7 +54,46 @@ export const config = {
 };
 
 export const dblogDocs = `# dblog
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog)
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE/)
+
+${description}
+
+## Features
+- Easy to:
+  - Setup
+  - Configure
+  - Write
+- Supports:
+  - Tags
+  - Canonical
+  - [Open Graph](https://ogp.me)
+  - Analytics
+- Auto generate:
+  - RSS Feed
+  - Favicon
+  - Sitemap
+  - 404 page
+  - CSS
+- No Client side JavaScript
+- Minified HTML & Inline CSS
+- Lightweight
+
+## Getting Started
+- Download deno from https://deno.land/ and install it.
+- After installing deno run following commands.
+\`\`\`sh
+# See all the options that are available
+${command} --help
+
+# Setup the your blog (Skip this if already your blog setup)
+${command} --setup
+
+# Make your blog and Run on localhost
+${command}
+\`\`\`
+
+## Live Demo & Folder
+- [Demo](https://AnzenKodo.github.com/dblog)
 - [Folder Structure](https://github.com/AnzenKodo/dblog/tree/build)
 
 ## Configuration
