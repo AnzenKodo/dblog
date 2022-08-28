@@ -69,7 +69,7 @@
   <description>dblog blog generator, that generates blog from Markdown and JSON file.
 dblog handles technical parts, so you can focus on hard part writing.</description>
   <language>en-US</language>
-  <lastBuildDate>Sun, 28 Aug 2022 13:09:47 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 28 Aug 2022 13:49:36 GMT</lastBuildDate>
   <image>
     <url>favicon.svg</url>
     <title>dblog</title>
@@ -80,7 +80,7 @@ dblog handles technical parts, so you can focus on hard part writing.</descripti
   <atom:link href="feed.xml" type="application/rss+xml"/><item>
     <title>dblog Docs</title>
     <link>posts/dblog-Docs.html</link>
-    <pubDate>Sun, 28 Aug 2022 13:09:47 GMT</pubDate>
+    <pubDate>Sun, 28 Aug 2022 13:49:36 GMT</pubDate>
     <description><section>
 <h1 id="dblog" tabindex="-1"><a class="direct-link" href="#dblog" aria-hidden="true">#</a> dblog</h1>
 <figure data-type="image"><a href="https://anzenkodo.github.io/AnzenKodo/LICENSE/"><img src="https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge" alt="License: MIT" loading="lazy" decoding="async" class="lazy"></a><figcaption>License: MIT</figcaption></figure>
