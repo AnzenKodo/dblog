@@ -51,6 +51,5 @@ export default function meta(data, entry) {
   }
   entry.attributes.description = description.replaceAll('"', "'");
 
-  console.log(entry.attributes.description);
   return entry;
 }
