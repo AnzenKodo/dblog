@@ -52,10 +52,11 @@ const mdParse = new MarkdownIt({
   })
   .use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
+      style: "visually-hidden",
       placement: "before",
       class: "direct-link",
       symbol: "#",
-      level: [1, 2, 3, 4],
+      level: [1, 2, 3, 4, 5, 6],
     }),
   });
 
