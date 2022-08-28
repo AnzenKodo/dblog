@@ -26,8 +26,11 @@ dlog handles technical parts, so you can focus on hard part writing.
 
 ## Getting Started
 - Download deno from https://deno.land/ and install it.
-- After installing deno run following commands.
+- After installing open your terminal and run following commands.
 ```sh
+# Make blog directory
+mkdir blog
+
 # See all the options that are available
 deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dlog/mod.js --help
 

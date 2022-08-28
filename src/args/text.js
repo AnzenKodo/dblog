@@ -80,8 +80,11 @@ ${description}
 
 ## Getting Started
 - Download deno from https://deno.land/ and install it.
-- After installing deno run following commands.
+- After installing open your terminal and run following commands.
 \`\`\`sh
+# Make blog directory
+mkdir blog
+
 # See all the options that are available
 ${command} --help
 
