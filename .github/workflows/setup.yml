@@ -33,10 +33,10 @@ jobs:
           deno-version: v1.x
 
       - name: Run Setup
-        run: deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js --setup
+        run: deno run --allow-write --allow-read --allow-net --allow-run mod.js --setup
         
       - name: Run Build
-        run: deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js --build
+        run: deno run --allow-write --allow-read --allow-net --allow-run mod.js --build
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
