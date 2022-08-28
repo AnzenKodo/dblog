@@ -4,11 +4,12 @@ export default function tags(data, buildPath) {
   const tags = data.entries
     .filter((value) => value.attributes?.tags)
     .map((value) => value.attributes.tags)
+    .flat()
     .filter((item, index, arr) => arr.indexOf(item) === index);
 
   let tagsName = "";
 
-  for (const tag of tags[0]) {
+  for (const tag of tags) {
     let items = "";
     const itemsData = data.entries.filter((value) =>
       value.attributes?.tags.includes(tag)

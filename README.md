@@ -1,5 +1,6 @@
 # dblog
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE/)
+
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE)
 
 dblog blog generator, that generates blog from Markdown and JSON file.
 dblog handles technical parts, so you can focus on hard part writing.
@@ -16,6 +17,7 @@ dblog handles technical parts, so you can focus on hard part writing.
   - Analytics
 - Auto generate:
   - RSS Feed
+  - Github Pages Actions file
   - Favicon
   - Sitemap
   - 404 page
@@ -39,35 +41,15 @@ deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr
 ```
 
 ## Live Demo & Folder
-- [Demo](https://AnzenKodo.github.com/dblog)
-- [Folder Structure](https://github.com/AnzenKodo/dblog/tree/build)
+- [Live Demo](https://AnzenKodo.github.com/dblog)
+- [Generated Files](https://github.com/AnzenKodo/dblog/tree/gh-pages)
 
 ## Configuration
 Place `config.json` in root folder to edit default configuration. The `config.json` is optional.
 
 **The `config.json` with default configuration:**
 ```json
-{
-  "name": "dblog",
-  "start_url": "",
-  "description": "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.",
-  "email": "",
-  "author": "AnzenKodo",
-  "posts": "./posts",
-  "output": "site",
-  "favicon": "",
-  "lang": "en-US",
-  "port": 8000,
-  "background": "#ffffff",
-  "foreground": "#000000",
-  "theme": "#01a252",
-  "footer": "Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) under [MIT](https://anzenkodo.github.io/AnzenKodo/LICENSE)",
-  "page404": "404 Page Not Found, Sorry :(",
-  "backup": "./backup.json",
-  "exclude": [],
-  "nav": {},
-  "head": ""
-}
+undefined
 ```
 
 **Note:** Every option is optional.

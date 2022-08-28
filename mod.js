@@ -7,7 +7,7 @@ import md from "./src/utils/md.js";
 import meta from "./src/utils/meta.js";
 import parse from "./src/utils/parse.js";
 import server from "./src/utils/server.js";
-import { config } from "./src/utils/data.js";
+import config from "./src/utils/data.js";
 
 import tags from "./src/pages/tags.js";
 import feed from "./src/pages/feed.js";
@@ -53,8 +53,8 @@ function main(data) {
     feed(data, `${data.output}/feed.xml`);
   }
 
-  sitemap(data, parse, `${data.output}/sitemap.xml`);
   tags(data, `${data.output}/tags`);
+  sitemap(data, parse, `${data.output}/sitemap.xml`);
   index(data, data.entries, `${data.output}/index.html`);
   favicon(data);
   notFound(data, `${data.output}/404.html`);

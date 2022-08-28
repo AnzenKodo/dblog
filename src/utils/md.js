@@ -21,6 +21,7 @@ import fm from "https://jspm.dev/front-matter@4.0.2";
 
 const mdParse = new MarkdownIt({
   html: true,
+  xhtmlOut: false,
   linkify: true,
 })
   .use(footnote)

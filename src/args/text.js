@@ -1,5 +1,6 @@
-export const description =
-  "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.";
+import config from "../utils/data.js";
+
+export const data = config(false);
 
 const command =
   "deno run --allow-write --allow-read --allow-net --allow-run https://cdn.jsdelivr.net/gh/AnzenKodo/dblog/mod.js";
@@ -12,7 +13,7 @@ date: 20/08/2020
 canonical:
 ---`;
 
-export const helpText = `${description}
+export const helpText = `${data.description}
 
 Website: https://anzenkodo.github.io/dblog
 Repo: https://github.com/AnzenKodo/dblog
@@ -30,33 +31,11 @@ OPTIONS:
   --readme  Generate dblog 'README.md' file.
 `;
 
-export const config = {
-  "name": "dblog",
-  "start_url": "",
-  "description": description,
-  "email": "",
-  "author": "AnzenKodo",
-  "posts": "./posts",
-  "output": "site",
-  "favicon": "",
-  "lang": "en-US",
-  "port": 8000,
-  "background": "#ffffff",
-  "foreground": "#000000",
-  "theme": "#01a252",
-  "footer":
-    "Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) under [MIT](https://anzenkodo.github.io/AnzenKodo/LICENSE)",
-  "page404": "404 Page Not Found, Sorry :(",
-  "backup": "./backup.json",
-  "exclude": [],
-  "nav": {},
-  "head": "",
-};
-
 export const dblogDocs = `# dblog
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE/)
 
-${description}
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/AnzenKodo/LICENSE)
+
+${data.description}
 
 ## Features
 - Easy to:
@@ -70,6 +49,7 @@ ${description}
   - Analytics
 - Auto generate:
   - RSS Feed
+  - Github Pages Actions file
   - Favicon
   - Sitemap
   - 404 page
@@ -93,8 +73,8 @@ ${command}
 \`\`\`
 
 ## Live Demo & Folder
-- [Demo](https://AnzenKodo.github.com/dblog)
-- [Folder Structure](https://github.com/AnzenKodo/dblog/tree/build)
+- [Live Demo](https://AnzenKodo.github.com/dblog)
+- [Generated Files](https://github.com/AnzenKodo/dblog/tree/gh-pages)
 
 ## Configuration
 Place \`config.json\` in root folder to edit default configuration. The \`config.json\` is optional.
@@ -377,10 +357,53 @@ colspan="3"><strong>30–32</strong> ATP</td> </tr> </tbody> </table>
   <td></td> <td></td> <td>♘</td> <td></td> <td></td> </tr> <tr> <td>♙</td>
   <td>♙</td> <td>♙</td> <td>♙</td> <td></td> <td>♙</td> <td>♙</td> <td>♙</td>
   </tr> <tr> <td>♖</td> <td>♘</td> <td>♗</td> <td>♕</td> <td>♔</td> <td></td>
-  <td></td> <td>♖</td> </tr> </tbody> </table>
-`;
+  <td></td> <td>♖</td> </tr> </tbody> </table>`;
 
 export const template = `${fileOptions}
 
 # See [Markdown Guide](https://anzenkodo.github.io/dblog/posts/dblog-Docs.html#markdown-guide) to get started
 `;
+
+export const workflow =
+  `# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow will install Deno then run Deno lint and test.
+# For more information see: https://github.com/denoland/setup-deno
+
+name: dblog setup
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v3
+
+      - name: Setup Deno
+        # uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@004814556e37c54a2f6e31384c9e18e983317366
+        with:
+          deno-version: v1.x
+
+      - name: Run Build
+        run: ${command} --build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: \${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site`;
