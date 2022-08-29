@@ -18,7 +18,7 @@ export default function tags(data, buildPath) {
     for (const itemData of itemsData) {
       const title = itemData.attributes.title;
       items += `<li>
-        <a class="list-name" href="../../${itemData.fileNamePath}.html">${title}</a>
+        <a class="list-name" href="${data.start_url}${itemData.fileNamePath}.html">${title}</a>
         </li>`;
     }
 
