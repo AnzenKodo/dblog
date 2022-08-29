@@ -55,6 +55,7 @@ ${data.description}
   - Sitemap
   - 404 page
   - CSS
+  - \`mainfest.json\` file
 - No Client side JavaScript
 - Minified HTML & Inline CSS
 - Lightweight

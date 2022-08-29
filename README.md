@@ -3,8 +3,7 @@
 [![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/dblog/LICENSE)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/AnzenKodo/dblog/dblog%20setup/main?logo=github&style=for-the-badge)](https://github.com/AnzenKodo/dblog/actions/workflows/setup.yml)
 
-dblog blog generator, that generates blog from Markdown and JSON file.
-dblog handles technical parts, so you can focus on hard part writing.
+dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.
 
 ## Features
 - Easy to:
@@ -23,6 +22,7 @@ dblog handles technical parts, so you can focus on hard part writing.
   - Sitemap
   - 404 page
   - CSS
+  - `mainfest.json` file
 - No Client side JavaScript
 - Minified HTML & Inline CSS
 - Lightweight
@@ -53,7 +53,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 {
   "name": "dblog",
   "start_url": "https://AnzenKodo.github.io/dblog/",
-  "description": "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.",
+  "description": "dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.",
   "email": "",
   "author": "AnzenKodo",
   "posts": "./posts",
@@ -108,8 +108,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 ## Cli Options
 
 ```sh
-dblog blog generator, that generates blog from Markdown and JSON file.
-dblog handles technical parts, so you can focus on hard part writing.
+dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.
 
 Website: https://anzenkodo.github.io/dblog
 Repo: https://github.com/AnzenKodo/dblog

@@ -16,6 +16,7 @@ import favicon from "./src/pages/favicon.js";
 import index from "./src/pages/index.js";
 import posts from "./src/pages/posts.js";
 import notFound from "./src/pages/404.js";
+import manifest from "./src/pages/manifest.js";
 
 import help from "./src/args/help.js";
 import setup from "./src/args/setup.js";
@@ -58,6 +59,7 @@ function main(data) {
   index(data, data.entries, `${data.output}/index.html`);
   favicon(data);
   notFound(data, `${data.output}/404.html`);
+  manifest(data, `${data.output}/manifest.json`);
 
   if (data.backup) {
     Deno.writeTextFileSync(data.backup, JSON.stringify(data, null, 2));

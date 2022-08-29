@@ -14,7 +14,7 @@ export default function config(data) {
   data.name = data.name || "dblog";
   data.start_url = data.start_url || "https://AnzenKodo.github.io/dblog/";
   data.description = data.description ||
-    "dblog blog generator, that generates blog from Markdown and JSON file.\ndblog handles technical parts, so you can focus on hard part writing.";
+    "dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.";
   data.email = data.email || "";
   data.author = data.author || "AnzenKodo";
   data.posts = data.posts || "./posts";
