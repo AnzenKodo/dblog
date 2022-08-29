@@ -15,14 +15,18 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
   - Canonical
   - [Open Graph](https://ogp.me)
   - Analytics
+  - [Github Pages](https://pages.github.com/)
 - Auto generate:
-  - RSS Feed
   - Github Pages Actions file
   - Favicon
   - Sitemap
   - 404 page
   - CSS
   - `mainfest.json` file
+  - Feeds
+    - RSS
+    - JSON
+    - Atom
 - No Client side JavaScript
 - Minified HTML & Inline CSS
 - Lightweight
@@ -65,7 +69,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
   "foreground": "#000000",
   "theme": "#01a252",
   "footer": "<p>Made by <a href=\"https://AnzenKodo.github.io/AnzenKodo\">AnzenKodo</a> under <a href=\"https://anzenkodo.github.io/dblog/LICENSE\">MIT</a></p>\n",
-  "page404": "<p>404 Page Not Found, Sorry :(</p>\n",
+  "page404": "404 Page Not Found, Sorry :(",
   "backup": false,
   "exclude": [
     "config.json",
@@ -83,14 +87,14 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 - **author** - Your name or username.
 - **posts** - Path of posts.
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
-- **favicon** - Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
+- **favicon** - ***Recommended 500x500px***. Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
 - **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* `Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dblog/LICENSE.html)`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **theme** - Blog theme color. *Example:* '#0583f2', '#f20544', '#f2b705'.
-- **page404** - 404 page message. *Supports Commonmark Markdown format*. *Example:* 'Sorry page not found :('.
+- **page404** - 404 page message. *Example:* 'Sorry page not found :('.
 - **backup** - Backup file location. *Example:* `false` to don't generat `backup.json` file, './backup.json', './site/backup.json', '../backup.json'.
 - **exclude** - Exclude file or folder. *Example:*
   ```json
@@ -111,6 +115,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.
 
 Website: https://anzenkodo.github.io/dblog
+Package: https://deno.land/x/dblog
 Repo: https://github.com/AnzenKodo/dblog
 
 USAGE:
@@ -239,7 +244,7 @@ console.log("Code Blog in JavaScript");
 ```md
 ![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
 ```
-![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
+<figure data-type="image"><img src="https://deno.land/images/artwork/deno_matrix.png" alt="Deno" loading="lazy" decoding="async"><figcaption>Matrix by bramaudi</figcaption></figure>
 
 #### Footer
 ```md
