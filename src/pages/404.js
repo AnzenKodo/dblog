@@ -12,7 +12,7 @@ export default function notFound(data, buildPath) {
     html(
       data,
       meta,
-      `Go back to <a href="${data.start_url}">Home</a> page.`,
+      `<p>Go back to <a href="${data.start_url}">Home</a> page.</p>`,
       false,
     ),
   );

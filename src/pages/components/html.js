@@ -15,14 +15,18 @@ export default function html(data, meta, content, isPost) {
   const head = `<!DOCTYPE html>
   <html lang="${data.lang}">
   <head>
+  <title>${meta.title} - ${data.name}</title>
+  <link rel="icon" type="image/svg+xml" href="${data.start_url}${data.favicon}">
+  <link rel="manifest" href="${data.start_url}manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="${data.name} RSS Feed" href="${data.start_url}feed.xml">
+  <link rel="alternate" type="application/json" title="${data.name} JSON Feed" href="${data.start_url}feed.json">
+  <link rel="alternate" type="application/atom+xml" title="${data.name} Atom Feed" href="${data.start_url}feed.atom">
+  <link rel="sitemap" type="application/xml" title="${data.name} Sitemap" href="${data.start_url}sitemap.xml">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>${meta.title} - ${data.name}</title>
   <meta name="author" content="${data.author}">
   <meta name="description" content="${meta.description}">
   <meta name="theme-color" content="${data.theme}"/>
-  <link rel="icon" type="image/svg+xml" href="${data.start_url}${data.favicon}">
-  <link rel="manifest" href="${data.start_url}manifest.json">
   <meta property="og:image" content="${data.start_url}${data.favicon}">
   <meta property="og:image:width" content="500">
   <meta property="og:image:height" content="500">

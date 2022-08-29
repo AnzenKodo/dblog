@@ -48,14 +48,18 @@ ${data.description}
   - Canonical
   - [Open Graph](https://ogp.me)
   - Analytics
+  - [Github Pages](https://pages.github.com/)
 - Auto generate:
-  - RSS Feed
   - Github Pages Actions file
   - Favicon
   - Sitemap
   - 404 page
   - CSS
   - \`mainfest.json\` file
+  - Feeds
+    - RSS
+    - JSON
+    - Atom
 - No Client side JavaScript
 - Minified HTML & Inline CSS
 - Lightweight
@@ -93,14 +97,14 @@ ${JSON.stringify(data, null, 2)}
 - **author** - Your name or username.
 - **posts** - Path of posts.
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
-- **favicon** - Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
+- **favicon** - ***Recommended 500x500px***. Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
 - **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* \`Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dblog/LICENSE.html)\`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **theme** - Blog theme color. *Example:* '#0583f2', '#f20544', '#f2b705'.
-- **page404** - 404 page message. *Supports Commonmark Markdown format*. *Example:* 'Sorry page not found :('.
+- **page404** - 404 page message. *Example:* 'Sorry page not found :('.
 - **backup** - Backup file location. *Example:* \`false\` to don't generat \`backup.json\` file, './backup.json', './site/backup.json', '../backup.json'.
 - **exclude** - Exclude file or folder. *Example:*
   \`\`\`json
