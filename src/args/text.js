@@ -227,7 +227,7 @@ console.log("Code Blog in JavaScript");
 \`\`\`md
 ![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
 \`\`\`
-![Deno](https://deno.land/images/artwork/deno_matrix.png "Matrix by bramaudi")
+<figure data-type="image"><img src="https://deno.land/images/artwork/deno_matrix.png" alt="Deno" loading="lazy" decoding="async"><figcaption>Matrix by bramaudi</figcaption></figure>
 
 #### Footer
 \`\`\`md
