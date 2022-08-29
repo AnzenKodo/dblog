@@ -2,7 +2,7 @@
     <feed xmlns="http://www.w3.org/2005/Atom">
       <id>https://AnzenKodo.github.io/dblog/</id>
       <title>dblog</title>
-      <updated>Mon, 29 Aug 2022 23:18:38 GMT</updated>
+      <updated>Mon, 29 Aug 2022 23:26:13 GMT</updated>
       <author>
         <name>AnzenKodo</name>
         <email></email>
@@ -13,8 +13,8 @@
       <title>First Post</title>
       <id>https://AnzenKodo.github.io/dblog/posts/First-Post.html</id>
       <link href="https://AnzenKodo.github.io/dblog/posts/First-Post.html" rel="alternate"/>
-      <published>Mon, 29 Aug 2022 23:18:38 GMT</published>
-      <updated>Mon, 29 Aug 2022 23:18:38 GMT</updated>
+      <published>Mon, 29 Aug 2022 23:26:13 GMT</published>
+      <updated>Mon, 29 Aug 2022 23:26:13 GMT</updated>
       <content type="html"><![CDATA[<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
 <pre><code class="hljs language-js"><span class="hljs-comment">// this is a command</span>
 <span class="hljs-keyword">function</span> <span class="hljs-title function_">myCommand</span>(<span class="hljs-params"></span>) {
@@ -37,8 +37,8 @@
       <title>dblog Docs</title>
       <id>https://AnzenKodo.github.io/dblog/posts/dblog-Docs.html</id>
       <link href="https://AnzenKodo.github.io/dblog/posts/dblog-Docs.html" rel="alternate"/>
-      <published>Mon, 29 Aug 2022 23:18:38 GMT</published>
-      <updated>Mon, 29 Aug 2022 23:18:38 GMT</updated>
+      <published>Mon, 29 Aug 2022 23:26:13 GMT</published>
+      <updated>Mon, 29 Aug 2022 23:26:13 GMT</updated>
       <content type="html"><![CDATA[<section>
 <h1 id="dblog" tabindex="-1"><a class="direct-link" href="#dblog" aria-hidden="true">#</a> dblog</h1>
 <p><a href="https://anzenkodo.github.io/dblog/LICENSE"><img src="https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge" alt="License: MIT"></a>
@@ -171,6 +171,7 @@ deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/
 <pre><code class="hljs language-sh">dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.
 
 Website: https://anzenkodo.github.io/dblog
+Package: https://deno.land/x/dblog
 Repo: https://github.com/AnzenKodo/dblog
 
 USAGE:

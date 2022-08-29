@@ -16,6 +16,7 @@ canonical:
 export const helpText = `${data.description}
 
 Website: https://anzenkodo.github.io/dblog
+Package: https://deno.land/x/dblog
 Repo: https://github.com/AnzenKodo/dblog
 
 USAGE:
