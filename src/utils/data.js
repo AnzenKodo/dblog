@@ -29,11 +29,8 @@ export default function config(data) {
     data.footer ||
       "Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) under [MIT](https://anzenkodo.github.io/dblog/LICENSE)",
   );
-  data.page404 = mdParse.render(
-    data.page404 ||
-      "404 Page Not Found, Sorry :(",
-  );
-  data.backup = data.backup !== false ? false : "./backup.json";
+  data.page404 = data.page404 || "404 Page Not Found, Sorry :(",
+    data.backup = data.backup !== false ? false : "./backup.json";
   data.exclude = data.exclude
     ? ["config.json", "backup.json", ...data.exclude]
     : ["config.json", "backup.json"];

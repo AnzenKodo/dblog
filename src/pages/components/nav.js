@@ -10,7 +10,7 @@ export default function nav(data) {
   let post = "";
   post += `<li><a href="${data.start_url}">home</a></li>
 
-    <li><a href="${data.start_url}tags.html">tags</a></li><li><a href="${data.start_url}feed.xml">feed</a></li>`;
+    <li><a href="${data.start_url}tags.html">tags</a></li><li><a href="${data.start_url}feed.html">feed</a></li>`;
 
   if (data.nav) {
     for (const [name, path] of Object.entries(data.nav)) {

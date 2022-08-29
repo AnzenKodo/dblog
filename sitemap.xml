@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
       <loc>site/LICENSE.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:36 GMT</lastmod>
+      <lastmod>Mon, 29 Aug 2022 23:18:38 GMT</lastmod>
     </url><url>
-      <loc>site/tags/firstpost.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:37 GMT</lastmod>
-    </url><url>
-      <loc>site/tags/post.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:37 GMT</lastmod>
-    </url><url>
-      <loc>site/tags/tag.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:37 GMT</lastmod>
-    </url><url>
-      <loc>site/tags.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:37 GMT</lastmod>
+      <loc>site/feed.html</loc>
+      <lastmod>Mon, 29 Aug 2022 23:18:39 GMT</lastmod>
     </url><url>
       <loc>site/posts/dblog-Docs.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:37 GMT</lastmod>
+      <lastmod>Mon, 29 Aug 2022 23:18:39 GMT</lastmod>
     </url><url>
       <loc>site/posts/First-Post.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:36 GMT</lastmod>
+      <lastmod>Mon, 29 Aug 2022 23:18:38 GMT</lastmod>
     </url><url>
       <loc>site/README.html</loc>
-      <lastmod>Mon, 29 Aug 2022 05:32:37 GMT</lastmod>
+      <lastmod>Mon, 29 Aug 2022 23:18:39 GMT</lastmod>
     </url></urlset>
