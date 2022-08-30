@@ -29,11 +29,10 @@ const punk = `/* From https://github.com/AnzenKodo/punk/tree/v0.11 */
 }
 
 body {
-  font-family: var(--font-name);
   background: var(--bg);
   color: var(--fg);
   accent-color: var(--theme);
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "PT Sans", "Open Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "PT Sans", "Open Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-variant-ligatures: normal;
   font-size:100%;
   line-height: 1.5em;
@@ -536,7 +535,6 @@ code.hljs {
 }`;
 
 const blog = `body {
-  font-family: system-ui, sans-serif;
   letter-spacing: .05em;
 }
 
@@ -610,6 +608,18 @@ const blog = `body {
 
 .direct-link {
   text-decoration: none;
+}
+
+.search {
+  max-width: 100%;
+  margin: 3em 0;
+  font-size: 1.2em;
+}
+.search input[type=submit] {
+  margin: auto;
+  display: block;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 `;
 
