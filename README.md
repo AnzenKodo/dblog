@@ -15,9 +15,9 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
   - Canonical
   - [Open Graph](https://ogp.me)
   - Analytics
-  - [Github Pages](https://pages.github.com/)
+  - [GitHub Pages](https://pages.github.com/)
 - Auto generate:
-  - Github Pages Actions file
+  - GitHub Pages Actions file
   - Favicon
   - Sitemap
   - 404 page
@@ -51,7 +51,7 @@ dblog --serve
 ```
 
 ### Update
-To update dblog rerun the install command.
+To update dblog, rerun the installation command.
 ```sh
 deno run https://deno.land/x/dblog/install.js
 ```
@@ -98,21 +98,21 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 
 **Note:** Every option is optional.
 - **name** - Name of your blog.
-- **start_url** - Start url of your site. *Example:* 'https://example.com/', 'https://blog.example.com/', 'https://example.com/blog/'
+- **start_url** - Start URL of your site. *Example:* 'https://example.com/', 'https://blog.example.com/', 'https://example.com/blog/'
 - **email** - Your email address. This will enable 'Reply with Email' button in posts.
 - **author** - Your name or username.
 - **posts** - Path of posts.
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
-- **favicon** - ***Recommended 500x500px***. Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
-- **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
-- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* `Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) uder [MIT License](https://anzenkodo.github.io/dblog/LICENSE.html)`.
+- **favicon** - ***Recommended 500x500px***. Favicon location. *If empty, generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
+- **lang** - Blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
+- **footer** - Footer of your website. *Supports CommonMark Markdown format*. *Example:* `Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) uder [MIT License](https://anzenkodo.github.io/dblog/LICENSE.html)`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **theme** - Blog theme color. *Example:* '#0583f2', '#f20544', '#f2b705'.
-- **page404** - 404 page message. *Example:* 'Sorry page not found :('.
-- **backup** - Backup file location. *Example:* `false` to don't generat `backup.json` file, './backup.json', './site/backup.json', '../backup.json'.
-- **exclude** - Exclude file or folder. *Example:*
+- **page404** - 404 page message. *Example:* 'Sorry, page not found :('.
+- **backup** - Backup file location. *Example:* `false` to don't generate `backup.json` file, './backup.json', './site/backup.json', '../backup.json'.
+- **exclude** - Exclude files or folder. *Example:*
   ```json
   "exclude": [ ".env", "todo.md", "drafts" ],
   ```
@@ -125,7 +125,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
   ```
 - **head** - If you analytics or any other tags you want to put on head tag. *Example:* `<link rel="preconnect" href="//www.google-analytics.com" crossorigin="">`.
 
-## Cli Options
+## CLI Options
 
 ```sh
 dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.
@@ -159,15 +159,15 @@ date: 20/08/2020
 canonical:
 ---
 ```
-- **date** - If empty the file date will be used. *Note:* The file `date` might not always right. So always give you own date.
+- **date** - If empty, the file date will be used. *Note:* The file `date` might not always right. So always give you own date.
 - **canonical** - Share content between multiple sites without impacting SEO. Just put canonical URL. Know more about [canonical url](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls).
 
 ### If file name start with underscore "_" it will be consider as draft.
-**Example:** `posts/_This is draf.md`
+**Example:** `posts/_This is draft.md`
 
 ## Markdown Guide
 
-### [Commonmark](https://commonmark.org/help/) Syntex
+### [CommonMark](https://commonmark.org/help/) Syntex
 
 #### Heading
 
