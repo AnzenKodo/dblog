@@ -1,5 +1,5 @@
-import { dblogDocs } from "./text.js";
+import { docs } from "./text/docs.js";
 
 export default function readme() {
-  Deno.writeTextFileSync("./README.md", dblogDocs);
+  Deno.writeTextFileSync("./README.md", docs);
 }

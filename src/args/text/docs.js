@@ -1,41 +1,9 @@
-import config from "../utils/data.js";
+import { data, info } from "./text.js";
 
-export const data = config(false);
+export const docs = `# ${info.name}
 
-const command =
-  "deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js";
-
-const fileOptions = `---
-title: If empty the file name will be used
-description: If empty the first paragraph will be used.
-tags: [ "tag1", "tag2" ]
-date: 20/08/2020
-canonical:
----`;
-
-export const helpText = `${data.description}
-
-Website: https://anzenkodo.github.io/dblog
-Package: https://deno.land/x/dblog
-Repo: https://github.com/AnzenKodo/dblog
-
-USAGE:
-  ${command} [OPTIONS]
-
-OPTIONS:
-            If no options are given the localhost will run normally.
-  --noopen  Don't open browser, when starting localhost.
-  --help    Print help information.
-  --build   Build blog without starting localhost.
-  --setup   Setup new blog.
-  --backup  Restore blog if 'backup.json' file available.
-  --readme  Generate dblog 'README.md' file.
-`;
-
-export const dblogDocs = `# dblog
-
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/dblog/LICENSE)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/AnzenKodo/dblog/dblog%20setup/main?logo=github&style=for-the-badge)](https://github.com/AnzenKodo/dblog/actions/workflows/setup.yml)
+[![License: MIT](https://img.shields.io/github/license/${data.author}/${info.name}?style=for-the-badge)](${info.license})
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/${data.author}/${info.name}/setup/main?logo=github&style=for-the-badge)](https://github.com/${data.author}/${info.name}/actions/workflows/setup.yml)
 
 ${data.description}
 
@@ -66,22 +34,38 @@ ${data.description}
 - Lightweight
 
 ## Getting Started
+
+### Installing
 - Download deno from https://deno.land/ and install it.
 - After installing deno run following commands.
 \`\`\`sh
+# Install the ${info.name}
+${info.install} # Add deno to path, if you didn't already.
+
 # See all the options that are available
-${command} --help
+${info.name} --help
 
 # Setup the your blog (Skip this if already your blog setup)
-${command} --setup
+${info.name} --setup
 
 # Make your blog and Run on localhost
-${command}
+${info.name} --serve
+\`\`\`
+
+### Update
+To update ${info.name} rerun the install command.
+\`\`\`sh
+${info.install}
+\`\`\`
+
+### Run ${info.name} without installing ${info.name}
+\`\`\`sh
+${info.run} --help
 \`\`\`
 
 ## Live Demo & Folder
-- [Live Demo](https://AnzenKodo.github.io/dblog)
-- [Generated Files](https://github.com/AnzenKodo/dblog/tree/gh-pages)
+- [Live Demo](${info.website})
+- [Generated Files](${info.repo}/tree/gh-pages)
 
 ## Configuration
 Place \`config.json\` in root folder to edit default configuration. The \`config.json\` is optional.
@@ -100,7 +84,7 @@ ${JSON.stringify(data, null, 2)}
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
 - **favicon** - ***Recommended 500x500px***. Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
-- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* \`Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dblog/LICENSE.html)\`.
+- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* \`Made by [${data.author}](https://${data.author}.github.io/${data.author}) uder [MIT License](${info.license})\`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
@@ -123,12 +107,12 @@ ${JSON.stringify(data, null, 2)}
 ## Cli Options
 
 \`\`\`sh
-${helpText}
+${info.help}
 \`\`\`
 
 ## File Options
 \`\`\`
-${fileOptions}
+${info.meta}
 \`\`\`
 - **date** - If empty the file date will be used. *Note:* The file \`date\` might not always right. So always give you own date.
 - **canonical** - Share content between multiple sites without impacting SEO. Just put canonical URL. Know more about [canonical url](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls).
@@ -165,10 +149,10 @@ ${fileOptions}
 
 #### Link and Image
 \`\`\`md
-[dblog website](https://anzenkodo.github.io/dblog)
+[website](${info.website})
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 \`\`\`
-[dblog website](https://anzenkodo.github.io/dblog)
+[website](${info.website})
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 
 #### Blockquote
@@ -366,52 +350,3 @@ colspan="3"><strong>30–32</strong> ATP</td> </tr> </tbody> </table>
   <td>♙</td> <td>♙</td> <td>♙</td> <td></td> <td>♙</td> <td>♙</td> <td>♙</td>
   </tr> <tr> <td>♖</td> <td>♘</td> <td>♗</td> <td>♕</td> <td>♔</td> <td></td>
   <td></td> <td>♖</td> </tr> </tbody> </table>`;
-
-export const template = `${fileOptions}
-
-# See [Markdown Guide](https://anzenkodo.github.io/dblog/posts/dblog-Docs.html#markdown-guide) to get started
-`;
-
-export const workflow =
-  `# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow will install Deno then run Deno lint and test.
-# For more information see: https://github.com/denoland/setup-deno
-
-name: dblog setup
-
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Setup repo
-        uses: actions/checkout@v3
-
-      - name: Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@004814556e37c54a2f6e31384c9e18e983317366
-        with:
-          deno-version: v1.x
-
-      - name: Run Build
-        run: ${command} --build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: \${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site`;

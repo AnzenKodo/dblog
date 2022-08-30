@@ -75,16 +75,13 @@ function main(data) {
   }
 }
 
-if (Deno.args.includes("--help")) help();
-else if (Deno.args.includes("--backup")) backup();
+if (Deno.args.includes("--backup")) backup();
 else if (Deno.args.includes("--setup")) setup();
 else if (Deno.args.includes("--readme")) readme();
 else {
-  const data = config("config.json");
-
-  if (Deno.args.includes("--build")) {
-    main(data);
-  } else {
-    server(data, main);
-  }
+  if (Deno.args.includes("--serve") || Deno.args.includes("--build")) {
+    const data = config("./config.json");
+    if (Deno.args.includes("--serve")) server(data, main);
+    else if (Deno.args.includes("--build")) main(data);
+  } else help();
 }
