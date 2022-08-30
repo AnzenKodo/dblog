@@ -1,7 +1,7 @@
 # dblog
 
-[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/dblog/LICENSE)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/AnzenKodo/dblog/dblog%20setup/main?logo=github&style=for-the-badge)](https://github.com/AnzenKodo/dblog/actions/workflows/setup.yml)
+[![License: MIT](https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge)](https://anzenkodo.github.io/dblog/LICENSE.html)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/AnzenKodo/dblog/setup/main?logo=github&style=for-the-badge)](https://github.com/AnzenKodo/dblog/actions/workflows/setup.yml)
 
 dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.
 
@@ -32,21 +32,37 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
 - Lightweight
 
 ## Getting Started
+
+### Installing
 - Download deno from https://deno.land/ and install it.
 - After installing deno run following commands.
 ```sh
+# Install the dblog
+deno run dblog/install.js # Add deno to path, if you didn't already.
+
 # See all the options that are available
-deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js --help
+dblog --help
 
 # Setup the your blog (Skip this if already your blog setup)
-deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js --setup
+dblog --setup
 
 # Make your blog and Run on localhost
-deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js
+dblog --serve
+```
+
+### Update
+To update dblog rerun the install command.
+```sh
+deno run dblog/install.js
+```
+
+### Run dblog without installing dblog
+```sh
+deno run -A https://deno.land/x/dblog/mod.js --help
 ```
 
 ## Live Demo & Folder
-- [Live Demo](https://AnzenKodo.github.io/dblog)
+- [Live Demo](https://anzenkodo.github.io/dblog)
 - [Generated Files](https://github.com/AnzenKodo/dblog/tree/gh-pages)
 
 ## Configuration
@@ -89,7 +105,7 @@ Place `config.json` in root folder to edit default configuration. The `config.js
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
 - **favicon** - ***Recommended 500x500px***. Favicon location. *If empty generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - You blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
-- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* `Made by [AnzenKodo](https://anzenkodo.github.io/AnzenKodo) uder [MIT License](https://github.com/dblog/LICENSE.html)`.
+- **footer** - Footer of your website. *Supports Commonmark Markdown format*. *Example:* `Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) uder [MIT License](https://anzenkodo.github.io/dblog/LICENSE.html)`.
 - **port** - Port of your blog on localhost. *Example*: '8080', '8300', '8400'.
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
@@ -117,18 +133,19 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
 Website: https://anzenkodo.github.io/dblog
 Package: https://deno.land/x/dblog
 Repo: https://github.com/AnzenKodo/dblog
+Docs: https://anzenkodo.github.io/dblogposts/dblog-Docs.html
 
 USAGE:
-  deno run --allow-write --allow-read --allow-net --allow-run https://deno.land/x/dblog/mod.js [OPTIONS]
+  dblog [OPTIONS]
 
 OPTIONS:
-            If no options are given the localhost will run normally.
-  --noopen  Don't open browser, when starting localhost.
-  --help    Print help information.
+  --serve   Build blog and Start localhost.
+    --noopen  Don't open browser, when starting localhost.
   --build   Build blog without starting localhost.
   --setup   Setup new blog.
   --backup  Restore blog if 'backup.json' file available.
-  --readme  Generate dblog 'README.md' file.
+  --readme  Generate 'README.md' file.
+  --help    Print help information.
 
 ```
 
@@ -177,10 +194,10 @@ canonical:
 
 #### Link and Image
 ```md
-[dblog website](https://anzenkodo.github.io/dblog)
+[website](https://anzenkodo.github.io/dblog)
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 ```
-[dblog website](https://anzenkodo.github.io/dblog)
+[website](https://anzenkodo.github.io/dblog)
 ![Jurassic Deno by Samip Poudel](https://deno.land/images/artwork/jurassicDeno.jpg)
 
 #### Blockquote
