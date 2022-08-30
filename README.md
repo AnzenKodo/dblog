@@ -38,7 +38,7 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
 - After installing deno run following commands.
 ```sh
 # Install the dblog
-deno run dblog/install.js # Add deno to path, if you didn't already.
+deno run https://deno.land/x/dblog/install.js # Add deno to path, if you didn't already.
 
 # See all the options that are available
 dblog --help
@@ -53,7 +53,7 @@ dblog --serve
 ### Update
 To update dblog rerun the install command.
 ```sh
-deno run dblog/install.js
+deno run https://deno.land/x/dblog/install.js
 ```
 
 ### Run dblog without installing dblog
@@ -133,7 +133,7 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
 Website: https://anzenkodo.github.io/dblog
 Package: https://deno.land/x/dblog
 Repo: https://github.com/AnzenKodo/dblog
-Docs: https://anzenkodo.github.io/dblogposts/dblog-Docs.html
+Docs: https://anzenkodo.github.io/dblog/posts/dblog-Docs.html
 
 USAGE:
   dblog [OPTIONS]
