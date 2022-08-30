@@ -14,6 +14,7 @@ ${data.description}
   - Write
 - Supports:
   - Tags
+  - Search (Power by [DuckDuckGo](https://duckduckgo.com/))
   - Canonical
   - [Open Graph](https://ogp.me)
   - Analytics
