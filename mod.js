@@ -16,6 +16,7 @@ import index from "./src/pages/index.js";
 import posts from "./src/pages/posts.js";
 import notFound from "./src/pages/404.js";
 import manifest from "./src/pages/manifest.js";
+import search from "./src/pages/search.js";
 
 import feed from "./src/pages/feed.js";
 import rss from "./src/pages/rss.js";
@@ -69,6 +70,7 @@ function main(data) {
   tags(data, `${data.output}/tags`);
   index(data, data.entries, `${data.output}/index.html`);
   notFound(data, `${data.output}/404.html`);
+  search(data, `${data.output}/search.html`);
 
   if (data.backup) {
     Deno.writeTextFileSync(data.backup, JSON.stringify(data, null, 2));
