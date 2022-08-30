@@ -12,6 +12,7 @@ dblog blog generator, that generates blog from Markdown and JSON file. dblog han
   - Write
 - Supports:
   - Tags
+  - Search (Power by [DuckDuckGo](https://duckduckgo.com/))
   - Canonical
   - [Open Graph](https://ogp.me)
   - Analytics
