@@ -81,7 +81,7 @@ ${JSON.stringify(data, null, 2)}
 - **start_url** - Start URL of your site. *Example:* 'https://example.com/', 'https://blog.example.com/', 'https://example.com/blog/'
 - **email** - Your email address. This will enable 'Reply with Email' button in posts.
 - **author** - Your name or username.
-- **posts** - Path of posts.
+- **posts** - Path of posts. *Example:* 'posts', 'writing', 'notes'.
 - **output** - Folder where your blog build will be placed. *Example:* './blog', '../site/blog', 'site/blog'.
 - **favicon** - ***Recommended 500x500px***. Favicon location. *If empty, generated favicon will be used*. *Example:* './favicon.png', './static/favicon.icon', '../favicon.jpg'.
 - **lang** - Blog language in 'RFC 5646' format. Example: 'ja' for Japanese, 'sv' for Swedish, 'it' for Italian. See [List of common primary language subtags in Wikipedia](https://wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
@@ -90,6 +90,7 @@ ${JSON.stringify(data, null, 2)}
 - **background** - Background color in light mode. Becomes foreground color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **foreground** - Foreground color in light mode. Becomes background color in light mode. *Example:* '#000000', "#ffffff', '##FEFBFE'.
 - **theme** - Blog theme color. *Example:* '#0583f2', '#f20544', '#f2b705'.
+- **style** - Stylesheet location path or url. ***Note:*** If empty default shylesheet will be used. *Example:* './style.css', '../style.css', 'https://cdn.jsdelivr.net/gh/AnzenKodo/punk@0.4/css/punk.min.css'.
 - **page404** - 404 page message. *Example:* 'Sorry, page not found :('.
 - **backup** - Backup file location. *Example:* \`false\` to don't generate \`backup.json\` file, './backup.json', './site/backup.json', '../backup.json'.
 - **exclude** - Exclude files or folder. *Example:*
