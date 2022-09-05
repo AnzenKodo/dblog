@@ -599,6 +599,9 @@ const blog = `body {
 }
 
 .skip-to-content-link {
+  background: var(--theme);
+  color: var(--fg);
+  padding: .3em;
   position: absolute;
   transform: translateY(-200%);
 }

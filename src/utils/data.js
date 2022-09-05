@@ -25,9 +25,10 @@ export default function config(data) {
   data.background = data.background || "#ffffff";
   data.foreground = data.foreground || "#000000";
   data.theme = data.theme || "#01a252";
+  data.style = data.style || "";
   data.footer = mdParse.render(
     data.footer ||
-      "Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) under [MIT](https://anzenkodo.github.io/dblog/LICENSE)",
+      "Made by [AnzenKodo](https://AnzenKodo.github.io/AnzenKodo) under [MIT](https://anzenkodo.github.io/dblog/LICENSE) | [SOURCE](https://deno.land/x/dblog)",
   );
   data.page404 = data.page404 || "404 Page Not Found, Sorry :(",
     data.backup = data.backup !== false ? false : "./backup.json";
