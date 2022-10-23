@@ -17,7 +17,7 @@ export default function atom(data, buildPath) {
       <generator uri="https://deno.land/x/dlog" version="2.4.0">dlog</generator>`;
 
   for (const entry of data.entries) {
-    if (!entry.isPost || entry.ext !== ".md" || entry.isDraft) continue;
+    if (!entry.isPost || entry.ext !== ".md") continue;
 
     xml += `<entry>
       <title>${entry.attributes.title}</title>
