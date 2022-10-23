@@ -14,8 +14,8 @@ infos.package = "https://deno.land/x/" + infos.name;
 infos.install = `deno run ${infos.package}/install.js`;
 infos.run = `deno run -A ${infos.package}/mod.js`;
 infos.meta = `---
-title: If empty the file name will be used
-description: If empty the first paragraph will be used.
+title: If title is empty dblog will use filename as title.
+description: If empty the first paragraph of the post will be used.
 tags: [ "tag1", "tag2" ]
 date: 20/08/2020
 canonical:

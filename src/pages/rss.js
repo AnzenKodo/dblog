@@ -88,7 +88,7 @@ export default function rss(data, buildPath) {
   <atom:link rel="alternate" href="${data.start_url}feed.xml" type="application/rss+xml"/>`;
 
   for (const entry of data.entries) {
-    if (!entry.isPost || entry.ext !== ".md" || entry.isDraft) continue;
+    if (!entry.isPost || entry.ext !== ".md") continue;
 
     xml += `<item>
     <title>${entry.attributes.title}</title>

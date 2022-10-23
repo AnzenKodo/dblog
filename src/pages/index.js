@@ -4,7 +4,7 @@ export default function index(data, entries, buildPath) {
   let main = "";
 
   for (const entry of entries) {
-    if (entry.ext !== ".md" || !entry.isPost || entry.isDraft) continue;
+    if (entry.ext !== ".md" || !entry.isPost) continue;
 
     const date = entry.attributes.date;
     const readingTime = entry.attributes.readingTime;

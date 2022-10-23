@@ -36,6 +36,9 @@ function main(data) {
   for (let entry of [...walkSync(".")]) {
     entry = parse(entry, data.output, data.posts);
 
+    // // Ignore draft posts on build time
+    if (entry.isDraft && Deno.args.includes("--build")) continue;
+
     if (entry.name !== "." && !entry.isOutput) {
       ensureDirSync(`${data.output}/${entry.dir}`);
 
@@ -47,8 +50,7 @@ function main(data) {
       }
     }
 
-    const draftPost = /^_/.test(entry.name);
-    if (!entry.isOutput && entry.ext === ".md" && !draftPost) {
+    if (!entry.isOutput && entry.ext === ".md") {
       entry = md(entry);
       entry = meta(data, entry);
       posts(data, entry, `${data.output}/${entry.fileNamePath}.html`);
