@@ -12,10 +12,10 @@ import del from "https://jspm.dev/markdown-it-ins-del@0.1.1";
 import deflist from "https://jspm.dev/markdown-it-deflist@2.1.0";
 import sections from "https://jspm.dev/markdown-it-header-sections@1.0.0";
 import checkbox from "https://jspm.dev/markdown-it-task-lists@2.1.1";
-import highlightjs from "https://cdn.skypack.dev/markdown-it-highlightjs@4.0.1";
+import highlightjs from "https://jspm.dev/markdown-it-highlightjs@4.0.1";
 import implicitFigures from "https://jspm.dev/markdown-it-image-figures@2.1.0";
-import multimd from "https://cdn.skypack.dev/markdown-it-multimd-table@4.2.0";
-import markdownItAnchor from "https://cdn.skypack.dev/markdown-it-anchor@v8.6.4";
+import multimd from "https://jspm.dev/markdown-it-multimd-table@4.2.0";
+import markdownItAnchor from "https://jspm.dev/markdown-it-anchor@v8.6.4";
 
 import fm from "https://jspm.dev/front-matter@4.0.2";
 
