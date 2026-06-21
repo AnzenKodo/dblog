@@ -2,7 +2,7 @@
     <feed xmlns="http://www.w3.org/2005/Atom">
       <id>https://AnzenKodo.github.io/dblog/</id>
       <title>dblog</title>
-      <updated>Sun, 21 Jun 2026 21:46:38 GMT</updated>
+      <updated>Sun, 21 Jun 2026 21:51:01 GMT</updated>
       <author>
         <name>AnzenKodo</name>
         <email></email>
@@ -13,8 +13,8 @@
       <title>First Post</title>
       <id>https://AnzenKodo.github.io/dblog/posts/First-Post.html</id>
       <link href="https://AnzenKodo.github.io/dblog/posts/First-Post.html" rel="alternate"/>
-      <published>Sun, 21 Jun 2026 21:46:38 GMT</published>
-      <updated>Sun, 21 Jun 2026 21:46:38 GMT</updated>
+      <published>Sun, 21 Jun 2026 21:51:01 GMT</published>
+      <updated>Sun, 21 Jun 2026 21:51:01 GMT</updated>
       <content type="html"><![CDATA[<p>Leverage agile frameworks to provide a robust synopsis for high level
 overviews. Iterative approaches to corporate strategy foster collaborative
 thinking to further the overall value proposition. Organically grow the
@@ -48,8 +48,8 @@ loop on focusing solely on the bottom line.</p>
       <title>dblog Docs</title>
       <id>https://AnzenKodo.github.io/dblog/posts/dblog-Docs.html</id>
       <link href="https://AnzenKodo.github.io/dblog/posts/dblog-Docs.html" rel="alternate"/>
-      <published>Sun, 21 Jun 2026 21:46:38 GMT</published>
-      <updated>Sun, 21 Jun 2026 21:46:38 GMT</updated>
+      <published>Sun, 21 Jun 2026 21:51:01 GMT</published>
+      <updated>Sun, 21 Jun 2026 21:51:01 GMT</updated>
       <content type="html"><![CDATA[<section>
 <h1 id="dblog" tabindex="-1"><a class="direct-link" href="#dblog" aria-hidden="true">#</a> dblog</h1>
 <p><a href="https://anzenkodo.github.io/dblog/LICENSE.html"><img src="https://img.shields.io/github/license/AnzenKodo/dblog?style=for-the-badge" alt="License: MIT"></a>
