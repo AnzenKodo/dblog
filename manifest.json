@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "dblog",
+  "short_name": "dblog",
+  "start_url": "https://AnzenKodo.github.io/dblog/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "dblog blog generator, that generates blog from Markdown and JSON file. dblog handles technical parts, so you can focus on hard part writing.",
+  "icons": [
+    {
+      "src": "https://AnzenKodo.github.io/dblog/favicon.svg",
+      "sizes": "500x500",
+      "type": "image/svg+xml"
+    }
+  ],
+  "orientation": "portrait",
+  "shortcuts": [
+    {
+      "name": "Tags",
+      "url": "https://AnzenKodo.github.io/dblog/tags",
+      "description": "dblog tags"
+    }
+  ],
+  "theme_color": "#01a252"
+}
